@@ -1,0 +1,15 @@
+.container {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-areas:
+    "warriors battle";
+  grid-template-columns: 1fr 1fr;
+}
+
+.warriors {
+  grid-area: warriors;
+}
+
+.battle {
+  grid-area: battle;
+}

@@ -1,0 +1,23 @@
+.battle-container {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-areas:
+    "battle-title"
+    "battle-buttons"
+    "battle-summary"
+    ;
+}
+
+.battle-title {
+  grid-area: battle-title;
+}
+
+.battle-buttons {
+  grid-area: battle-buttons;
+}
+
+.battle-summary {
+  height: 60vh;
+  overflow: auto;
+  grid-area: battle-summary;
+}

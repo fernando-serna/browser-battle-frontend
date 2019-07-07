@@ -1,0 +1,16 @@
+<div class="battle-container">
+
+  <h4 class="battle-title">Battle Summary</h4>
+
+  <div class="battle-buttons">
+    <button type="submit" class="battle-fight" (click)="getBattleSummary()">Fight</button>
+    <button type="submit" class="battle-clear" (click)="clearBattleSummary()">Clear</button>
+  </div>
+
+  <div *ngIf="battleSummary.length" class="battle-summary">
+    <div *ngFor="let battle of battleSummary">
+      <p>{{battle}}</p>
+    </div>
+  </div>
+
+</div>
