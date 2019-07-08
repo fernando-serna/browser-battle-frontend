@@ -5,48 +5,32 @@
   <form #warriorForm="ngForm" (ngSubmit)="onSubmit(warriorForm.value)">
     <div *ngFor="let warrior of warriors">
       <h5>Player {{warrior.id}}</h5>
-
-      <label>
-        name:
-        <input required
-               type="text"
-               name="{{warrior.id}}-name"
-               [(ngModel)]="warrior.name"
-               placeholder="name" />
-      </label>
-      <label>
-        health:
-        <input required
-               type="number"
-               name="{{warrior.id}}-health"
-               [(ngModel)]="warrior.health"
-               placeholder="health" />
-      </label>
-      <label>
-        attack:
-        <input required
-               type="number"
-               name="{{warrior.id}}-attack"
-               [(ngModel)]="warrior.attack"
-               placeholder="attack" />
-      </label>
-      <label>
-        defense:
-        <input required
-               type="number"
-               name="{{warrior.id}}-defense"
-               [(ngModel)]="warrior.defense"
-               placeholder="defense" />
-      </label>
-
+      <div class="warrior-details">
+        <label>
+          name:
+          <input required type="text" name="{{warrior.id}}-name" [(ngModel)]="warrior.name" placeholder="name" />
+        </label>
+        <label>
+          health:
+          <input required type="number" name="{{warrior.id}}-health" [(ngModel)]="warrior.health"
+            placeholder="health" />
+        </label>
+        <label>
+          attack:
+          <input required type="number" name="{{warrior.id}}-attack" [(ngModel)]="warrior.attack"
+            placeholder="attack" />
+        </label>
+        <label>
+          defense:
+          <input required type="number" name="{{warrior.id}}-defense" [(ngModel)]="warrior.defense"
+            placeholder="defense" />
+        </label>
+      </div>
       <p>Total={{warrior.health + warrior.attack + warrior.defense}}</p>
 
       <div *ngIf="warrior.health + warrior.attack + warrior.defense > 1000">
-        Please make sure the sum is <= 1000.
-      </div>
-    </div>
-
-    <button type="submit" class="btn btn-success" [disabled]="!warriorForm.form.valid || !warriorForm.form.dirty">Update</button>
+        Please make sure the sum is <= 1000. </div> </div> <button type="submit" class="btn btn-success"
+          [disabled]="!warriorForm.form.valid || !warriorForm.form.dirty">Update</button>
   </form>
 
 </div>
